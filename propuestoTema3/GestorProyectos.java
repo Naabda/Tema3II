@@ -1,7 +1,7 @@
 /**
- * @author David Abellán Navarro
- * @author Juan Carlos Corredor Sánchez
- * @course 2º D.A.M.
+ * @author David AbellÃ¡n Navarro
+ * @author Juan Carlos Corredor SÃ¡nchez
+ * @course 2Âº D.A.M.
  * @date 25/10/2021
  * @github https://github.com/Naabda/Tema3II
  * 
@@ -158,7 +158,7 @@ public class GestorProyectos {
 			ResultSet rs = consulta.executeQuery();
 			
 			if (!rs.next()) {
-				System.out.println("No existe ningún empleado con el dni:" + dni + ".");
+				System.out.println("No existe ningÃºn empleado con el dni:" + dni + ".");
 			} else {
 				
 				try (PreparedStatement insert = c.prepareStatement(SQL_INSERT_PROY, PreparedStatement.RETURN_GENERATED_KEYS)){
@@ -281,9 +281,9 @@ public class GestorProyectos {
 			ResultSet rsProyectos = cProyectos.executeQuery();
 
 			if (!rsEmpleados.next()) {
-				System.out.println("No existe ningún empleado con el dni:" + dni + ".");
+				System.out.println("No existe ningÃºn empleado con el dni:" + dni + ".");
 			} else if (!rsProyectos.next()) {
-				System.out.println("No existe ningún proyectos con el identificador:" + id + ".");
+				System.out.println("No existe ningÃºn proyectos con el identificador:" + id + ".");
 			} else {
 
 				try (PreparedStatement insert = c.prepareStatement(SQL_INSERT_ASIG)){
@@ -393,192 +393,4 @@ public class GestorProyectos {
 		
 		return listado;
 	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-//	private static void logErrorSQL(SQLException e) {
-//	System.err.println("SQL ERROR mensaje: " + e.getMessage());
-//	System.err.println("SQL Estado: " + e.getSQLState());
-//	System.err.println("SQL codigo especifico: " + e.getErrorCode());
-//	//		    System.err.format("SQL State: %s\n%s", e.getSQLState(), e.getMessage());
-//}
-//	
-//	
-//	
-//	public static boolean deleteClienteByDni(String dni) {
-//		boolean deleted = false;
-//
-//		try (	Connection conn = DriverManager.getConnection(urlConnection, user, pwd);
-//				PreparedStatement preparedStatement = conn.prepareStatement(SQL_DELETE)
-//				) 
-//		{
-//			preparedStatement.setString(1, dni);
-//			int row = preparedStatement.executeUpdate();
-//
-//			// rows affected
-//			//			System.out.println(row);
-//			if(row!=0) {
-//				deleted = true;
-//			}
-//
-//		} catch (SQLException e) {
-//			logErrorSQL(e);
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		}
-//
-//		return deleted;
-//	}
-//
-//	public static boolean updateClienteApellidosByDni(String apellido , String dni) {
-//		boolean updated = false;
-//
-//		try (	Connection conn = DriverManager.getConnection(urlConnection, user, pwd);
-//				PreparedStatement preparedStatement = conn.prepareStatement(SQL_UPDATE)
-//				) 
-//		{
-//			preparedStatement.setString(1, apellido);
-//			preparedStatement.setString(2, dni);
-//			int row = preparedStatement.executeUpdate();
-//
-////			rows affected
-////			System.out.println(row);
-//			if(row!=0) {
-//				updated = true;
-//			}
-//
-//		} catch (SQLException e) {
-//			System.err.format("SQL State: %s\n%s", e.getSQLState(), e.getMessage());
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		}
-//
-//		return updated;
-//	}
-//
-//	public static void mostrarClienteByDni(String dni) {
-//
-//		try (	
-//				Connection conn = DriverManager.getConnection(urlConnection, user, pwd);
-//				PreparedStatement preparedStatement = conn.prepareStatement(SQL_SELECT);
-//				) 
-//		{
-//			preparedStatement.setString(1, dni);
-//
-//			try (ResultSet resultSet = preparedStatement.executeQuery();) 
-//			{
-//				if (resultSet.next()) {
-//					dni = resultSet.getString("DNI");
-//					String apellidos = resultSet.getString("APELLIDOS");
-//					String cp = resultSet.getString("CP");
-//
-//					System.out.println("Cliente encontrado. DNI: "+dni+" APELLIDOS: "+apellidos+" CP: "+cp);
-//				}
-//			}
-//		} catch (SQLException e) {
-//			logErrorSQL(e);
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		}
-//
-//	}
-//
-//
-//	public static Cliente getClienteByDni(String dni) {
-//
-//		Cliente cliente=null;
-//
-//		try (	
-//				Connection conn = DriverManager.getConnection(urlConnection, user, pwd);
-//				PreparedStatement preparedStatement = conn.prepareStatement(SQL_SELECT);
-//				) 
-//		{
-//			preparedStatement.setString(1, dni);
-//
-//			try (ResultSet resultSet = preparedStatement.executeQuery();) 
-//			{
-//				if (resultSet.next()) {
-//					cliente = new Cliente	( 	
-//							resultSet.getString("DNI"),
-//							resultSet.getString("APELLIDOS"),
-//							resultSet.getString("CP")
-//							);
-//				}
-//			}
-//		} catch (SQLException e) {
-//			logErrorSQL(e);
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		}
-//
-//		return cliente;
-//	}
-//
-//	public static ArrayList<Cliente> getClientes() {
-//
-//		ArrayList<Cliente> clientes= new ArrayList<>();
-//
-//		try (	
-//				Connection conn = DriverManager.getConnection(urlConnection, user, pwd);
-//				PreparedStatement preparedStatement = conn.prepareStatement(SQL_SELECT_ALL);
-//				) 
-//		{
-//
-//			try (ResultSet resultSet = preparedStatement.executeQuery();) 
-//			{
-//
-//				while (resultSet.next()) {
-//					clientes.add( new Cliente	( 	
-//							resultSet.getString("DNI"),
-//							resultSet.getString("APELLIDOS"),
-//							resultSet.getString("CP")
-//							)
-//							);
-//				}
-//			}
-//		} catch (SQLException e) {
-//			logErrorSQL(e);
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		}
-//
-//		return clientes;
-//	}
-
 }
