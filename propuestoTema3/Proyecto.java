@@ -1,3 +1,11 @@
+/**
+ * @author David Abellán Navarro
+ * @author Juan Carlos Corredor Sánchez
+ * @course 2º D.A.M.
+ * @date 25/10/2021
+ * @github https://github.com/Naabda/Tema3II
+ * 
+ */
 package propuestoTema3;
 
 import java.sql.Date;
