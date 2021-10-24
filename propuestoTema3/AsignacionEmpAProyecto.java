@@ -1,7 +1,7 @@
 /**
- * @author David Abellán Navarro
- * @author Juan Carlos Corredor Sánchez
- * @course 2º D.A.M.
+ * @author David AbellÃ¡n Navarro
+ * @author Juan Carlos Corredor SÃ¡nchez
+ * @course 2Âº D.A.M.
  * @date 25/10/2021
  * @github https://github.com/Naabda/Tema3II
  * 
@@ -46,22 +46,6 @@ public class AsignacionEmpAProyecto {
 		}
 
 	}
-
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 
 	public String getDni_nif_emp() {
 		return dni_nif_emp;
